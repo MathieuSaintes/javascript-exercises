@@ -1,6 +1,5 @@
-const removeFromArray = function(array) {
-  const values = Array.prototype.slice.call(arguments, 1);
-  return array.filter(element => !values.includes(element));
+const removeFromArray = function() {
+
 };
 
 // Do not edit below this line
