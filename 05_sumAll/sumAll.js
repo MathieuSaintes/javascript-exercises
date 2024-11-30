@@ -1,16 +1,16 @@
-const sumAll = function(a,b) {
-  if (
-    a < 0 ||
-    b < 0 ||
-    typeof a !== 'number' ||
-    typeof b !== 'number'
-    ) return 'ERROR';
-  if (a > b) return sumAll(b,a);  
-  let total = 0;
-  for (let i = a; i <= b; i++) {
-    total += i;
-  }
-  return total;
+const sumAll = function(...pair) {
+
+    for (const item of pair) {
+        if (typeof item != 'number' || item < 0) return 'ERROR';
+    }
+
+    const [smallest, largest] = pair.sort();
+
+    let sum = 0;
+    for (let i = smallest; i <= largest; i++){
+        sum += i;
+    }
+    return sum;
 };
 
 // Do not edit below this line
